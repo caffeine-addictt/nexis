@@ -1,0 +1,8 @@
+[package]
+name = "auth-nyp-infosec"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.38.1", features = ["full"] }
+tokio-test = "0.4.4"
