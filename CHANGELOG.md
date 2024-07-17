@@ -35,7 +35,8 @@ straightforward as possible.
 
 ### Added
 
-- Setting up the project (#1)
+- Setting up the project ([#1](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/1))
+- Adding project logo ([#3](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/3))
 
 ### Changed
 
