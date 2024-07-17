@@ -79,26 +79,6 @@ labels:
     color: e88707
     description: This issue might be caused by a 3rd party script/package/other reasons
 
-  - name: "Os: Windows"
-    color: AEB1C2
-    description: Is Windows-specific
-
-  - name: "Os: Mac"
-    color: AEB1C2
-    description: Is Mac-specific
-
-  - name: "Os: Linux"
-    color: AEB1C2
-    description: Is Linux-specific
-
   - name: "Skip-Changelog"
     color: AEB1C2
     description: Skip changelog in release tag
-
-  - name: "help wanted"
-    color: 008672
-    description: Help wanted
-
-  - name: "good first issue"
-    color: 008672
-    description: Good first issue
