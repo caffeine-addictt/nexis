@@ -41,3 +41,5 @@ straightforward as possible.
 ### Changed
 
 ### Fixed
+
+- Labels did not get auto generated ([#5](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/5))
