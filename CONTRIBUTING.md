@@ -74,23 +74,18 @@ git commit -m "docs: Moved README.md"
 
 ### Testing
 
-_Replace this with what you test your code with._
 Please ensure that tests are updated and pass before merging a Pull Request.
 
 ```sh
 # To test your code, run:
-# Replace this with your test command
+make test
 ```
 
 ### Linting
 
-_Replace this with what you lint your code with._
 Please ensure that your code passes linting before merging a Pull Request.
 
 ```sh
-# To lint your code, run:
-# Replace this with your lint command
-
 # To fix any linting errors, run:
-# Replace this with your fix command
+make lint
 ```
