@@ -42,6 +42,7 @@ straightforward as possible.
 
 - Remove unused `help wanted`, `good first issue` and `OS` labels ([#6](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/6))
 - [BREAKING] Migration to `Golang` ([#7](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/7))
+- Configure dependabot for `Golang` ([#8](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/8))
 
 ### Fixed
 
