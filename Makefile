@@ -1,6 +1,4 @@
 BINARY_NAME:=nyp-auth
-GOPATH:=$(shell go env GOPATH)
-BIN:=$(GOPATH)/bin
 
 
 # =================================== DEFAULT =================================== #
@@ -31,14 +29,13 @@ build: tidy lint test
 ## run: Run the program
 .PHONY: run
 run:
-	$(BIN)/air
+	go run github.com/air-verse/air@latest
 
 ## install: Install the program
 .PHONY: install
 install:
 	npm i
 	go get ./...
-	go install github.com/air-verse/air@latest
 
 ## test: Test the program
 .PHONY: test
@@ -55,7 +52,7 @@ test:
 ## tidy: Tidy mod file and format code
 .PHONY: tidy
 tidy:
-	go fmt ./...
+	go fmt .
 	go mod tidy -v
 
 ## clean: Clean binaries
