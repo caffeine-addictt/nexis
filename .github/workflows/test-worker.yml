@@ -22,8 +22,6 @@ jobs:
 
       - name: Use golang
         uses: actions/setup-go@v5
-        with:
-          go-version: latest
 
       - name: Install dependencies
         run: |
@@ -45,8 +43,6 @@ jobs:
 
       - name: Use golang
         uses: actions/setup-go@v5
-        with:
-          go-version: latest
 
       - name: Install dependencies
         run: |
