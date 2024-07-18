@@ -1,6 +1,4 @@
 node_modules/
 
-
-# Added by cargo
-
-/target
+# Ignore binaries
+nyp-auth*
