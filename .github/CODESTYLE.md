@@ -19,8 +19,13 @@ Please ensure that your code passes linting before merging a Pull Request.
 - Docstrings are to follow _Replace this with what style Docstrings should follow_.
 - Private attributes are to be prefixed with an underscore.
 
-```text
-# Replace this with examples
+```go
+// This is documentation for the following function
+// I can also make it multiline
+func MyFunc() {}
+
+// And also can document just about anything
+package test
 ```
 
 ## Markdown Guidelines
