@@ -41,6 +41,7 @@ straightforward as possible.
 ### Changed
 
 - Remove unused `help wanted`, `good first issue` and `OS` labels ([#6](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/6))
+- [BREAKING] Migration to `Golang` ([#7](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/7))
 
 ### Fixed
 
