@@ -36,6 +36,7 @@ run:
 ## install: Install the program
 .PHONY: install
 install:
+	npm i
 	go get ./...
 	go install github.com/air-verse/air@latest
 
@@ -69,4 +70,5 @@ clean:
 ## lint: Lint code
 .PHONY: lint
 lint: tidy
+	npm run lint:fix
 	go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run
