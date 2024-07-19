@@ -1,5 +1,11 @@
 BINARY_NAME:=nyp-auth
 
+ifeq ($(OS),Windows_NT)
+RM_BIN:=rmdir /s /q bin 2>nul
+else
+RM_BIN:=rm -rf bin
+endif
+
 
 # =================================== DEFAULT =================================== #
 
@@ -22,9 +28,9 @@ help:
 ## build: builds the binary
 .PHONY: build
 build: tidy lint test
-	npx cross-env GOARCH=amd64 GOOS=linux   go build -ldflags="-s -w" -o $(BINARY_NAME)-linux main.go
-	npx cross-env GOARCH=amd64 GOOS=darwin  go build -ldflags="-s -w" -o $(BINARY_NAME)-darwin main.go
-	npx cross-env GOARCH=amd64 GOOS=windows go build -ldflags="-s -w" -o $(BINARY_NAME)-windows main.go
+	npx cross-env GOARCH=amd64 GOOS=linux   go build -ldflags="-s -w" -o ./bin/$(BINARY_NAME)-linux main.go
+	npx cross-env GOARCH=amd64 GOOS=darwin  go build -ldflags="-s -w" -o ./bin/$(BINARY_NAME)-darwin main.go
+	npx cross-env GOARCH=amd64 GOOS=windows go build -ldflags="-s -w" -o ./bin/$(BINARY_NAME)-windows main.go
 
 ## run: Run the program
 .PHONY: run
@@ -59,9 +65,7 @@ tidy:
 .PHONY: clean
 clean:
 	go clean
-	rm -f ${BINARY_NAME}-linux
-	rm -f ${BINARY_NAME}-darwin
-	rm -f ${BINARY_NAME}-windows
+	${RM_BIN} || echo OK
 
 # https://golangci-lint.run/welcome/install/
 ## lint: Lint code

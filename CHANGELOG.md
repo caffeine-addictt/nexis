@@ -46,6 +46,7 @@ straightforward as possible.
 - Removed vercel.json file ([#9](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/9))
 - Update editorconfig file to apply 4-space indents and utf8 charset on
   GOlang files ([#10](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/10))
+- Build to `./bin/` ([#12](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/12))
 
 ### Fixed
 
