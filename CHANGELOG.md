@@ -50,3 +50,5 @@ straightforward as possible.
 ### Fixed
 
 - Labels did not get auto generated ([#5](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/5))
+- Fixed build script's cross-platform compatability at setting ENV variables
+  ([#11](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/11)))

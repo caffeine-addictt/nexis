@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           set -xe
-          go get .
+          make install
 
       - name: Build
         run: |
@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: |
           set -xe
-          go get .
+          make install
 
       - name: Test
         run: |
