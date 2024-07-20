@@ -18,23 +18,25 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/caffeine-addictt/auth-nyp-infosec">
+  <a href="https://github.com/caffeine-addictt/nexis">
     <img src="assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">NYP InfoSec Auth Server</h3>
+  <h3 align="center">nexis</h3>
 
   <p align="center">
-    The auth server for NYP InfoSec
+    NYP InfoSec Auth Server
     <br />
-    <a href="https://github.com/caffeine-addictt/auth-nyp-infosec/docs/index.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/caffeine-addictt/nexis/docs/index.md">
+      <strong>Explore the docs »</strong>
+    </a>
     <br />
     <br />
-    <a href="https://github.com/caffeine-addictt/auth-nyp-infosec/issues/new/choose">
+    <a href="https://github.com/caffeine-addictt/nexis/issues/new/choose">
       Report Bug
     </a>
     ·
-    <a href="https://github.com/caffeine-addictt/auth-nyp-infosec/issues/new/choose">
+    <a href="https://github.com/caffeine-addictt/nexis/issues/new/choose">
       Request Feature
     </a>
   </p>
@@ -46,7 +48,7 @@
 
 This is a auth server for NYP InfoSec.
 
-See the [open issues](https://github.com/caffeine-addictt/auth-nyp-infosec/issues)
+See the [open issues](https://github.com/caffeine-addictt/nexis/issues)
 for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,9 +139,9 @@ Jun Xiang - [contact@ngjx.org](mailto:contact@ngjx.org)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[forks-shield]: https://img.shields.io/github/forks/caffeine-addictt/auth-nyp-infosec.svg?style=for-the-badge
-[forks-url]: https://github.com/caffeine-addictt/auth-nyp-infosec/network/members
-[stars-shield]: https://img.shields.io/github/stars/caffeine-addictt/auth-nyp-infosec.svg?style=for-the-badge&color=yellow
-[stars-url]: https://github.com/caffeine-addictt/auth-nyp-infosec/stargazers
-[license-shield]: https://img.shields.io/github/license/caffeine-addictt/auth-nyp-infosec.svg?style=for-the-badge
-[license-url]: https://github.com/caffeine-addictt/auth-nyp-infosec/blob/main/LICENSE
+[forks-shield]: https://img.shields.io/github/forks/caffeine-addictt/nexis.svg?style=for-the-badge
+[forks-url]: https://github.com/caffeine-addictt/nexis/network/members
+[stars-shield]: https://img.shields.io/github/stars/caffeine-addictt/nexis.svg?style=for-the-badge&color=yellow
+[stars-url]: https://github.com/caffeine-addictt/nexis/stargazers
+[license-shield]: https://img.shields.io/github/license/caffeine-addictt/nexis.svg?style=for-the-badge
+[license-url]: https://github.com/caffeine-addictt/nexis/blob/main/LICENSE

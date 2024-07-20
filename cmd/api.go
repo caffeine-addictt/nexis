@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/caffeine-addictt/auth-nyp-infosec/cmd/middleware"
+	"github.com/caffeine-addictt/nexis/cmd/middleware"
 )
 
 type APIServer struct {

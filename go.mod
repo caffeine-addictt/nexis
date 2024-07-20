@@ -1,4 +1,4 @@
-module github.com/caffeine-addictt/auth-nyp-infosec
+module github.com/caffeine-addictt/nexis
 
 go 1.22.5
 
