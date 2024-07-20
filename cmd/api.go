@@ -3,6 +3,7 @@ package cmd
 import (
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/caffeine-addictt/auth-nyp-infosec/cmd/middleware"
 )
@@ -26,8 +27,12 @@ func (s *APIServer) Run() error {
 	)
 
 	server := http.Server{
-		Addr:    s.addr,
-		Handler: stack(router),
+		Addr:           s.addr,
+		Handler:        stack(router),
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		IdleTimeout:    120 * time.Second,
+		MaxHeaderBytes: 1 << 20, // 1 MB
 	}
 
 	log.Println("Starting server on", s.addr)
