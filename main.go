@@ -1,7 +1,7 @@
 package main
 
-import "github.com/caffeine-addictt/auth-nyp-infosec/src"
+import "github.com/caffeine-addictt/auth-nyp-infosec/cmd"
 
 func main() {
-	src.Serve()
+	cmd.Execute()
 }
