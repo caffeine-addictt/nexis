@@ -37,6 +37,7 @@ straightforward as possible.
 
 - Setting up the project ([#1](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/1))
 - Adding project logo ([#3](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/3))
+- Basic http implementation ([#13](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/13))
 
 ### Changed
 
