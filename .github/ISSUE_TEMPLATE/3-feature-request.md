@@ -9,7 +9,7 @@ assignees: ["caffeine-addictt"]
 # Feature Request
 
 Your issue may already be reported!
-Please check out our [active issues](https://github.com/caffeine-addictt/auth-nyp-infosec/issues) before creating one.
+Please check out our [active issues](https://github.com/caffeine-addictt/nexis/issues) before creating one.
 
 ## Is Your Feature Request Related to an Issue?
 

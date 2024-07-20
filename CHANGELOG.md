@@ -35,19 +35,20 @@ straightforward as possible.
 
 ### Added
 
-- Setting up the project ([#1](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/1))
-- Adding project logo ([#3](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/3))
-- Basic http implementation ([#13](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/13))
+- Setting up the project ([#1](https://github.com/caffeine-addictt/nexis/pull/1))
+- Adding project logo ([#3](https://github.com/caffeine-addictt/nexis/pull/3))
+- Basic http implementation ([#13](https://github.com/caffeine-addictt/nexis/pull/13))
 
 ### Changed
 
-- Remove unused `help wanted`, `good first issue` and `OS` labels ([#6](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/6))
-- [BREAKING] Migration to `Golang` ([#7](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/7))
-- Configure dependabot for `Golang` ([#8](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/8))
-- Removed vercel.json file ([#9](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/9))
+- Remove unused `help wanted`, `good first issue` and `OS` labels ([#6](https://github.com/caffeine-addictt/nexis/pull/6))
+- [BREAKING] Migration to `Golang` ([#7](https://github.com/caffeine-addictt/nexis/pull/7))
+- Configure dependabot for `Golang` ([#8](https://github.com/caffeine-addictt/nexis/pull/8))
+- Removed vercel.json file ([#9](https://github.com/caffeine-addictt/nexis/pull/9))
 - Update editorconfig file to apply 4-space indents and utf8 charset on
-  GOlang files ([#10](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/10))
+  GOlang files ([#10](https://github.com/caffeine-addictt/nexis/pull/10))
+- Rename project `auth-nyp-infosec` -> `nexis` ([#14](https://github.com/caffeine-addictt/nexis/pull/14))
 
 ### Fixed
 
-- Labels did not get auto generated ([#5](https://github.com/caffeine-addictt/auth-nyp-infosec/pull/5))
+- Labels did not get auto generated ([#5](https://github.com/caffeine-addictt/nexis/pull/5))

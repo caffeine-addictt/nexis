@@ -45,7 +45,7 @@ The data that must NOT be posted here:
 # Security Report
 
 Your issue may already be reported!
-Please check out our [active issues](https://github.com/caffeine-addictt/auth-nyp-infosec/issues) before creating one.
+Please check out our [active issues](https://github.com/caffeine-addictt/nexis/issues) before creating one.
 
 ## Describe the Security Issue
 
