@@ -2,3 +2,6 @@ node_modules/
 
 # Ignore binaries
 nyp-auth*
+
+# Ignore env
+.env*
