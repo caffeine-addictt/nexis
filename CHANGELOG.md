@@ -48,6 +48,7 @@ straightforward as possible.
 - Update editorconfig file to apply 4-space indents and utf8 charset on
   GOlang files ([#10](https://github.com/caffeine-addictt/nexis/pull/10))
 - Rename project `auth-nyp-infosec` -> `nexis` ([#14](https://github.com/caffeine-addictt/nexis/pull/14))
+- Build to `bin/`([#16](https://github.com/caffeine-addictt/nexis/pull/16))
 
 ### Fixed
 
