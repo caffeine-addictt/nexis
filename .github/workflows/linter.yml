@@ -24,12 +24,12 @@ jobs:
       - name: Install dependencies
         run: |
           set -xe
-          npm i
+          make install/npm
 
       - name: Lint
         run: |
           set -xe
-          npm run lint
+          make lint/npm
 
   golang:
     name: Go
@@ -44,7 +44,7 @@ jobs:
       - name: Lint
         run: |
           set -xe
-          go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+          make lint/go
 
   check:
     if: always()

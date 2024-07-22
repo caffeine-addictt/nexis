@@ -31,7 +31,7 @@ jobs:
       - name: Build
         run: |
           set -xe
-          make build
+          make build/go
 
   golang-test:
     name: Testing golang
@@ -47,12 +47,12 @@ jobs:
       - name: Install dependencies
         run: |
           set -xe
-          go get .
+          make install/go
 
       - name: Test
         run: |
           set -xe
-          make test
+          make test/go
 
   check:
     if: always()
