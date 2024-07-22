@@ -1,8 +1,21 @@
+# Node stuff
 node_modules/
 
 # Ignore binaries
 bin/
 tmp/
+dist/
+*.egg-info/
 
 # Ignore env
 .env*
+
+# Python stuff
+venv*/
+*.pytest_cache
+__pycache__/
+
+*.py[cod]
+*$py.class
+
+*.ruff_cache

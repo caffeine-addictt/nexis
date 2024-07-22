@@ -11,10 +11,12 @@ and refer to it throughout the development of your contribution.
 
 Listed is a example class used demonstrate general rules you should follow
 throughout the development of your contribution.
-
-We use _Replace this with with you lint your code with_
-to ensure that code is consistent and follows our code style.
 Please ensure that your code passes linting before merging a Pull Request.
+
+> [!NOTE] Nexis uses [editor-config](https://editorconfig.org)
+> Please ensure that your editor uses the same settings as the project.
+
+### Golang
 
 - Docstrings are to follow _Replace this with what style Docstrings should follow_.
 - Private attributes are to be prefixed with an underscore.
@@ -26,6 +28,50 @@ func MyFunc() {}
 
 // And also can document just about anything
 package test
+```
+
+### Python
+
+- Docstrings are to follow reST (reStructuredText Docstring Format)
+  as specified in [PEP 287](https://peps.python.org/pep-0287/)
+- Private attributes are to be prefixed with an underscore
+- Use of [typing](https://docs.python.org/3/library/typing.html) type hints
+
+```python
+class ExampleClass:
+    """
+    ExampleClass
+    ------------
+    Example class for CODESTYLE.md
+    """
+    # ^^^ reST Docstring Format
+
+    _private_attribute : int # private attributes begin with a lowercase
+    public_attribute   : int # type hint for integer is defined here
+
+    def __init__(
+        self,
+        public_attribute: int # type hint for parameters
+    ) -> None: # the expected return value of method
+        """
+        Initializes a ExampleClass
+
+        Parameters
+        ----------
+        :param public_attribute: example attribute
+        """
+        self.public_attribute = public_attribute
+        self.private_attribute = square(public_attribute)
+
+    def square(self, value: int) -> int:
+        """
+        Example method that square roots a value
+
+        Parameters
+        ----------
+        :param value: value that you want squared
+        """
+        return value**2
 ```
 
 ## Markdown Guidelines

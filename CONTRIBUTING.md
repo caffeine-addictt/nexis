@@ -12,15 +12,92 @@ please follow it in all your interactions with the project.
 <!-- prettier-ignore-start -->
 <!--toc:start-->
 
-1. [Pull Request Process](#pull-request-process)
-2. [Issue Report Process](#issue-report-process)
-3. [Commit Message Guidelines](#commit-message-guidelines)
-4. [Code Quality](#code-quality)
+- [**Contributing**](#contributing)
+  - [Table of Contents](#table-of-contents)
+  - [Setting up the project locally](#setting-up-the-project-locally)
+    - [1. Pre-requisites](#1-pre-requisites)
+    - [2. Python Venv](#2-python-venv)
+    - [3. Dependencies](#3-dependencies)
+    - [4. Running Nexis](#4-running-nexis)
+  - [Pull Request Process](#pull-request-process)
+  - [Issue Report Process](#issue-report-process)
+  - [Commit Message Guidelines](#commit-message-guidelines)
+  - [Code Quality](#code-quality)
     - [Testing](#testing)
     - [Linting](#linting)
 
 <!--toc:end-->
 <!-- prettier-ignore-end -->
+
+## Setting up the project locally
+
+### 1. Pre-requisites
+
+_Nexis_ uses `GNU/Make` to automate many of the processes like
+building, testing and linting. You can check if you have it installed
+by running `make --version`.
+
+_Nexis_ uses [Poetry](https://python-poetry.org/) to manage CLI dependencies.
+You can check if you have it installed by running `poetry --version`.
+
+_Nexis_ uses [Go mod](https://golang.org/ref/mod) to manage Go dependencies.
+It comes installed with `Go`. You can check if you have it installed by
+running `go version`.
+
+_Nexis_ uses [NPM](https://www.npmjs.com/) to manage JavaScript dependencies,
+which are primarily used for code quality and linting.
+You can check if you have it installed by running `npm -v`.
+
+### 2. Python Venv
+
+Before running `make install`, `GNU/make` assumes that you already have
+created and activated a Python virtual environment. If you have not, you can
+do so by running:
+
+```sh
+# GNU/Linux or MacOs
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+py -m venv venv
+venv\Scripts\activate.bat
+```
+
+### 3. Dependencies
+
+You can install the dependencies by running:
+
+```sh
+make install
+```
+
+You can add Python dependencies by running:
+
+```sh
+poetry add <name>
+```
+
+You can add Golang dependencies by running:
+
+```sh
+go get <name>
+```
+
+### 4. Running Nexis
+
+You can start the server by running:
+
+```sh
+make server
+```
+
+You can run the CLI by running:
+
+```sh
+poetry install
+poetry run nexis
+```
 
 ## Pull Request Process
 
@@ -83,9 +160,15 @@ make test
 
 ### Linting
 
+We use [Ruff](https://docs.astral.sh/ruff/),
+[Gofmt](https://pkg.go.dev/cmd/gofmt) and [Prettier](https://prettier.io/)
+to ensure that code is consistent and follows our [code style](./.github/CODESTYLE.md).
 Please ensure that your code passes linting before merging a Pull Request.
 
 ```sh
-# To fix any linting errors, run:
+# To lint your code, run:
 make lint
+
+# To fix any linting errors, run:
+make format
 ```
