@@ -14,7 +14,7 @@ func RegisterRoutes(router *http.ServeMux) {
 
 	// Register /api/v1
 	v1 := http.NewServeMux()
-	v1.HandleFunc("GET /up", apiV1Handlers.GetOk)
+	v1.HandleFunc("GET /up", apiV1Handlers.GetUp)
 
 	router.Handle("/api/v1/", http.StripPrefix("/api/v1", v1))
 }

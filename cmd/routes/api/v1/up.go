@@ -7,7 +7,7 @@ import (
 	"github.com/caffeine-addictt/nexis/cmd/utils"
 )
 
-func GetOk(w http.ResponseWriter, r *http.Request) {
+func GetUp(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
