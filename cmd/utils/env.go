@@ -32,19 +32,19 @@ type Config struct {
 var Environment = &Config{}
 
 func LoadEnvironment() {
+	// Only care about .env file if not in production
+	if Environment.Env != "production" {
+		if err := godotenv.Load(); err != nil {
+			log.Fatalf("Error loading .env file: %s", err)
+		}
+	}
+
 	// Parse ENV Environment.Env = "development"
 	if env, set := os.LookupEnv("ENV"); set {
 		Environment.Env = env
 	}
 	if Environment.Env != "development" && Environment.Env != "production" {
 		log.Fatalln("ENV must be either 'development' or 'production'")
-	}
-
-	// Only care about .env file if not in production
-	if Environment.Env != "production" {
-		if err := godotenv.Load(); err != nil {
-			log.Fatalf("Error loading .env file: %s", err)
-		}
 	}
 
 	// Parse PORT
