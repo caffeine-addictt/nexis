@@ -12,3 +12,11 @@ Documentation:
 "Type: CI":
   - changed-files:
       - any-glob-to-any-file: [.github/workflows/**]
+
+"Scope: Server":
+  - changed-files:
+      - any-glob-to-any-file: [./*.go]
+
+"Scope: Client":
+  - changed-files:
+      - any-glob-to-any-file: [./*.py]

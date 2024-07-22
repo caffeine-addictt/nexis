@@ -38,3 +38,6 @@ version-resolver:
 
 exclude-labels:
   - "Skip-Changelog"
+
+include-labels:
+  - "Scope: Client"
