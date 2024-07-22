@@ -9,6 +9,8 @@
 <!-- PROJECT SHIELDS -->
 <div align="center">
 
+<a href="[pypi-url]">[![PYPI - Version][version-shield]][pypi-url]</a>
+<a href="[pypi-url]">[![PYPI - Downloads][downloads-shield]][pypi-url]</a>
 <a href="[forks-url]">[![Forks][forks-shield]][forks-url]</a>
 <a href="[stars-url]">[![Stargazers][stars-shield]][stars-url]</a>
 <a href="[license-url]">[![GPL3.0 License][license-shield]][license-url]</a>
@@ -25,7 +27,7 @@
   <h3 align="center">Nexis</h3>
 
   <p align="center">
-    NYP InfoSec Auth Server
+    NYP InfoSec Auth Service
     <br />
     <a href="https://github.com/caffeine-addictt/nexis/docs/index.md">
       <strong>Explore the docs »</strong>
@@ -46,7 +48,7 @@
 
 ## About The Project
 
-This is a auth server for NYP InfoSec.
+This is a auth service for NYP InfoSec.
 
 See the [open issues](https://github.com/caffeine-addictt/nexis/issues)
 for a full list of proposed features (and known issues).
@@ -62,26 +64,22 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Golang v1.22.5+
+- Python v3.9+
 
 ### Installation
 
-_Below is an example of how you can run the auth server locally._
+_Below is an example of how you can install and use Nexis._
 
-#### 1. Install dependencies
+#### 1. Install Nexis
 
 ```sh
-make install
+pip install nexis
 ```
 
-#### 2. Add the environment variables
-
-TBD
-
-#### 3. Run the server
+#### 2. Run Nexis
 
 ```sh
-make run
+nexis
 ```
 
 <!-- CONTRIBUTING -->
@@ -139,6 +137,9 @@ Jun Xiang - [contact@ngjx.org](mailto:contact@ngjx.org)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
+[version-shield]: https://img.shields.io/pypi/v/nexis.svg?style=for-the-badge&color=efd0cd
+[downloads-shield]: https://img.shields.io/pypi/dm/nexis.svg?style=for-the-badge
+[pypi-url]: https://pypi.org/project/nexis/
 [forks-shield]: https://img.shields.io/github/forks/caffeine-addictt/nexis.svg?style=for-the-badge
 [forks-url]: https://github.com/caffeine-addictt/nexis/network/members
 [stars-shield]: https://img.shields.io/github/stars/caffeine-addictt/nexis.svg?style=for-the-badge&color=yellow
