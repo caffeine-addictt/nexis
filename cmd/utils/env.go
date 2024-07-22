@@ -52,8 +52,8 @@ func LoadEnvironment() error {
 	// Parse JWT_ACCESS_SECRET
 	if jwtAccessSecret, set := os.LookupEnv("JWT_ACCESS_SECRET"); set {
 		// Ensure JWT_SECRET is long, random and not guessable
-		if len(jwtAccessSecret) < 64 {
-			return fmt.Errorf("JWT_SECRET must be at least 32 characters long")
+		if len(jwtAccessSecret) < 32 {
+			return fmt.Errorf("JWT_ACCESS_SECRET must be at least 32 characters long")
 		}
 		Environment.JwtAccessSecret = jwtAccessSecret
 	} else {
@@ -63,8 +63,8 @@ func LoadEnvironment() error {
 	// Parse JWT_REFRESH_SECRET
 	if jwtRefreshSecret, set := os.LookupEnv("JWT_REFRESH_SECRET"); set {
 		// Ensure JWT_SECRET is long, random and not guessable
-		if len(jwtRefreshSecret) < 64 {
-			return fmt.Errorf("JWT_SECRET must be at least 32 characters long")
+		if len(jwtRefreshSecret) < 32 {
+			return fmt.Errorf("JWT_REFRESH_SECRET must be at least 32 characters long")
 		}
 		Environment.JwtRefreshSecret = jwtRefreshSecret
 	} else {
