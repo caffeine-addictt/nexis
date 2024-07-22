@@ -38,6 +38,7 @@ straightforward as possible.
 - Setting up the project ([#1](https://github.com/caffeine-addictt/nexis/pull/1))
 - Adding project logo ([#3](https://github.com/caffeine-addictt/nexis/pull/3))
 - Basic http implementation ([#13](https://github.com/caffeine-addictt/nexis/pull/13))
+- Moved Python CLI into main project ([#19](https://github.com/caffeine-addictt/nexis/pull/19))
 
 ### Changed
 
