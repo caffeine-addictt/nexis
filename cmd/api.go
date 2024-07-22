@@ -23,6 +23,7 @@ func (s *APIServer) Run() error {
 	RegisterRoutes(router)
 
 	stack := middleware.CreateStack(
+		middleware.RateLimiterMiddleware,
 		middleware.RequestLogger,
 	)
 
