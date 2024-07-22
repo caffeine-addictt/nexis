@@ -39,6 +39,7 @@ straightforward as possible.
 - Adding project logo ([#3](https://github.com/caffeine-addictt/nexis/pull/3))
 - Basic http implementation ([#13](https://github.com/caffeine-addictt/nexis/pull/13))
 - Moved Python CLI into main project ([#19](https://github.com/caffeine-addictt/nexis/pull/19))
+- Add default API setup (E.g. Ratelimiting, JWT) ([#21](https://github.com/caffeine-addictt/nexis/pull/21))
 
 ### Changed
 

@@ -140,7 +140,7 @@ test/go:
 	go run github.com/securego/gosec/v2/cmd/gosec@latest -quiet ./...
 	go run github.com/go-critic/go-critic/cmd/gocritic@latest check -enableAll ./...
 	go run github.com/google/osv-scanner/cmd/osv-scanner@latest -r .
-	go test -race .
+	go test -race ./...
 
 ## Misc: test/python: Runs Python tests
 .PHONY: test/python
@@ -186,7 +186,7 @@ format: format/go format/python format/npm
 ## Extra: format/go: Format Go code
 .PHONY: format/go
 format/go:
-	go fmt .
+	go fmt ./...
 	go mod tidy -v
 	go run github.com/golangci/golangci-lint/cmd/golangci-lint@latest run --fix
 
@@ -210,7 +210,7 @@ tidy: tidy/go tidy/python
 ## Extra: tidy/go: Clean up Go code artifacts
 .PHONY: tidy/go
 tidy/go:
-	go clean
+	go clean ./...
 	${RM_CMD} bin
 	${RM_CMD} tmp
 
