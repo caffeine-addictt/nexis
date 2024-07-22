@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-
-	"github.com/joho/godotenv"
 )
 
 type Config struct {
@@ -32,13 +30,6 @@ type Config struct {
 var Environment = &Config{}
 
 func LoadEnvironment() error {
-	// Only care about .env file if not in production
-	if Environment.Env != "production" {
-		if err := godotenv.Load(); err != nil {
-			return fmt.Errorf("error loading .env file: %s", err)
-		}
-	}
-
 	// Parse ENV Environment.Env = "development"
 	if env, set := os.LookupEnv("ENV"); set {
 		Environment.Env = env
