@@ -8,7 +8,9 @@ import (
 )
 
 func init() {
-	utils.LoadEnvironment()
+	if err := utils.LoadEnvironment(); err != nil {
+		panic(err)
+	}
 }
 
 func Execute() {

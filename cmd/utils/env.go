@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"log"
+	"fmt"
 	"os"
 	"strconv"
 
@@ -31,11 +31,11 @@ type Config struct {
 
 var Environment = &Config{}
 
-func LoadEnvironment() {
+func LoadEnvironment() error {
 	// Only care about .env file if not in production
 	if Environment.Env != "production" {
 		if err := godotenv.Load(); err != nil {
-			log.Fatalf("Error loading .env file: %s", err)
+			return fmt.Errorf("error loading .env file: %s", err)
 		}
 	}
 
@@ -44,7 +44,7 @@ func LoadEnvironment() {
 		Environment.Env = env
 	}
 	if Environment.Env != "development" && Environment.Env != "production" {
-		log.Fatalln("ENV must be either 'development' or 'production'")
+		return fmt.Errorf("ENV must be either 'development' or 'production'")
 	}
 
 	// Parse PORT
@@ -52,7 +52,7 @@ func LoadEnvironment() {
 	if port, set := os.LookupEnv("PORT"); set {
 		parsedPort, err := strconv.Atoi(port)
 		if err != nil {
-			log.Fatalf("Error parsing PORT: %s", err)
+			return fmt.Errorf("error parsing PORT: %s", err)
 		}
 
 		Environment.Port = parsedPort
@@ -62,21 +62,23 @@ func LoadEnvironment() {
 	if jwtAccessSecret, set := os.LookupEnv("JWT_ACCESS_SECRET"); set {
 		// Ensure JWT_SECRET is long, random and not guessable
 		if len(jwtAccessSecret) < 64 {
-			log.Fatalln("JWT_SECRET must be at least 32 characters long")
+			return fmt.Errorf("JWT_SECRET must be at least 32 characters long")
 		}
 		Environment.JwtAccessSecret = jwtAccessSecret
 	} else {
-		log.Fatalln("JWT_ACCESS_SECRET must be set")
+		return fmt.Errorf("JWT_ACCESS_SECRET must be set")
 	}
 
 	// Parse JWT_REFRESH_SECRET
 	if jwtRefreshSecret, set := os.LookupEnv("JWT_REFRESH_SECRET"); set {
 		// Ensure JWT_SECRET is long, random and not guessable
 		if len(jwtRefreshSecret) < 64 {
-			log.Fatalln("JWT_SECRET must be at least 32 characters long")
+			return fmt.Errorf("JWT_SECRET must be at least 32 characters long")
 		}
 		Environment.JwtRefreshSecret = jwtRefreshSecret
 	} else {
-		log.Fatalln("JWT_REFRESH_SECRET must be set")
+		return fmt.Errorf("JWT_REFRESH_SECRET must be set")
 	}
+
+	return nil
 }
