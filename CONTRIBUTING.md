@@ -48,6 +48,9 @@ _Nexis_ uses [NPM](https://www.npmjs.com/) to manage JavaScript dependencies,
 which are primarily used for code quality and linting.
 You can check if you have it installed by running `npm -v`.
 
+_Nexis_ uses [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) to create and manage containers.
+You can check if you have it installed by running `docker --version` and `docker compose version`.
+
 ### 2. Python Venv
 
 Before running `make install`, `GNU/make` assumes that you already have
@@ -89,7 +92,23 @@ go get <name>
 You can start the server by running:
 
 ```sh
+# RECOMMENDED
+# Using docker-compose watch for auto-reloading
+# and automatically restarting containers.
+#
+# Only exposes to localhost port 3000.
 make server
+
+# NOT RECOMMENDED
+# Using air for hot-reloading and auto-restarting.
+# Port is also configurable.
+#
+# However, this might break on non-linux systems and
+# you may encounter "but it works on my system though?" errors.
+#
+# We will not entertain bug reports for this as this is purely
+# for legacy purposes.
+make server/go-air
 ```
 
 You can run the CLI by running:
