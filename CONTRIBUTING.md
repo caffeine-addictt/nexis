@@ -19,6 +19,9 @@ please follow it in all your interactions with the project.
     - [2. Python Venv](#2-python-venv)
     - [3. Dependencies](#3-dependencies)
     - [4. Running Nexis](#4-running-nexis)
+    - [5. Cleanup](#5-cleanup)
+      - [Tidy](#tidy)
+      - [Clean](#clean)
   - [Pull Request Process](#pull-request-process)
   - [Issue Report Process](#issue-report-process)
   - [Commit Message Guidelines](#commit-message-guidelines)
@@ -116,6 +119,30 @@ You can run the CLI by running:
 ```sh
 poetry install
 poetry run nexis
+```
+
+### 5. Cleanup
+
+You can use `make tidy` and/or `make clean` to cleanup your environment.
+
+#### Tidy
+
+Tidy only removes binaries and caches.
+It is a less aggressive and preferred version of `make clean`.
+
+```sh
+make tidy
+```
+
+#### Clean
+
+Clean does what `tidy` does and also deletes
+`node_modules/` and `venv/`.
+Thus it is more aggressive and destructive, and may
+leave your environment in a bad state.
+
+```sh
+make clean
 ```
 
 ## Pull Request Process
