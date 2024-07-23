@@ -111,11 +111,24 @@ jobs:
           set -xe
           make test/python
 
+  docker-build:
+    name: Building docker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          set -xe
+          make build/docker
+
   check:
     if: always()
     name: Tests Successful
     runs-on: ubuntu-latest
-    needs: [golang-test, golang-build, python-test, python-build]
+    needs: [golang-test, golang-build, python-test, python-build, docker-build]
 
     steps:
       - name: Whether the whole test suite passed
