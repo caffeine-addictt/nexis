@@ -35,6 +35,14 @@ straightforward as possible.
 
 ### Added
 
+### Changed
+
+### Fixed
+
+## v0.1.1 - 2024-07-23
+
+### Added
+
 - Setting up the project ([#1](https://github.com/caffeine-addictt/nexis/pull/1))
 - Adding project logo ([#3](https://github.com/caffeine-addictt/nexis/pull/3))
 - Basic http implementation ([#13](https://github.com/caffeine-addictt/nexis/pull/13))
