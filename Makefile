@@ -3,8 +3,10 @@ PYTHON:=python
 
 ifeq ($(OS),Windows_NT)
 RM_CMD:=rd /s /q
+NULL:=/dev/nul
 else
 RM_CMD:=rm -rf
+NULL:=/dev/null
 endif
 
 
@@ -109,7 +111,7 @@ docs:
 
 # =================================== DEVELOPMENT =================================== #
 
-## Core: build: Builds the Python and Go binaries
+## Core: build: Builds Python, Go binaries and Docker image
 .PHONY: build
 build: build/python build/go
 
@@ -124,6 +126,15 @@ build/go:
 .PHONY: build/python
 build/python:
 	${PYTHON} -m poetry build
+
+## Extra: build/docker: Builds the docker image
+.PHONY: build/docker
+build/docker:
+	@docker --version 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
+	@docker compose --version 2> ${NULL} || { echo 'Docker-compose is not installed.'; exit 1; }
+	@echo ''
+
+	docker compose build
 
 
 
@@ -150,9 +161,16 @@ test/python:
 
 
 
-## Core: server: Run the Go server
+## Core: server: Run the Go server with docker
 .PHONY: server
 server:
+	@docker --version 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
+	@docker compose --version 2> ${NULL} || { echo 'docker compose not found.'; exit 1; }
+	docker compose watch
+
+## Misc: server/go-air: Run the Go server with air
+.PHONY: server/go-air
+server/go-air:
 	go run github.com/air-verse/air@latest
 
 # =================================== QUALITY ================================== #
@@ -205,7 +223,7 @@ format/npm:
 
 ## Core: tidy: Clean up code artifacts
 .PHONY: tidy
-tidy: tidy/go tidy/python
+tidy: tidy/go tidy/python tidy/docker
 
 ## Extra: tidy/go: Clean up Go code artifacts
 .PHONY: tidy/go
@@ -222,6 +240,18 @@ tidy/python:
 	${RM_CMD} .ruff_cache
 	${PYTHON} -Bc "for p in __import__('pathlib').Path('.').rglob('*.py[co]'): p.unlink()"
 	${PYTHON} -Bc "for p in __import__('pathlib').Path('.').rglob('__pycache__'): p.rmdir()"
+
+## Extra: tidy/docker: Clean up Docker artifacts
+.PHONY: tidy/docker
+tidy/docker:
+	@docker --version 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
+	@docker compose --version 2> ${NULL} || { echo 'docker compose not found.'; exit 1; }
+	@echo ''
+
+	docker compose down
+	@docker rmi nexis 2> ${NULL} && echo 'Docker image nexis:latest removed.' || echo 'Docker image nexis:latest not found.'
+	@docker rm nexis 2> ${NULL} && echo 'Docker container nexis removed.' || echo 'Docker container nexis not found.'
+	@echo 'Docker build cache at $HOME/.cache/go-build/ is not deleted by default.'
 
 
 
