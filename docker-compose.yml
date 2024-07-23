@@ -1,0 +1,14 @@
+services:
+  nexis:
+    container_name: nexis
+    image: nexis:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file: .env
+    develop:
+      watch:
+        - action: rebuild
+          path: ./cmd/
