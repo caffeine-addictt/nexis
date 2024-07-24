@@ -17,8 +17,7 @@ const AuthUserID = authUserKey("middleware.auth.userID")
 
 // To Handle returning 401
 func writeUnauthed(w http.ResponseWriter) {
-	w.WriteHeader(http.StatusUnauthorized)
-	utils.WriteJsonResponse(w, &types.APIErrorResponse{
+	utils.WriteJsonResponse(w, http.StatusUnauthorized, &types.APIErrorResponse{
 		Status:  http.StatusUnauthorized,
 		Message: http.StatusText(http.StatusUnauthorized),
 	})
