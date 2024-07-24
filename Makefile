@@ -130,10 +130,8 @@ build/python:
 ## Extra: build/docker: Builds the docker image
 .PHONY: build/docker
 build/docker:
-	@docker --version 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
-	@docker compose --version 2> ${NULL} || { echo 'Docker-compose is not installed.'; exit 1; }
-	@echo ''
-
+	@docker > ${NULL} 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
+	@docker compose > ${NULL} 2> ${NULL} || { echo 'Docker-compose is not installed.'; exit 1; }
 	docker compose build
 
 
@@ -164,8 +162,8 @@ test/python:
 ## Core: server: Run the Go server with docker
 .PHONY: server
 server:
-	@docker --version 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
-	@docker compose --version 2> ${NULL} || { echo 'docker compose not found.'; exit 1; }
+	@docker > ${NULL} 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
+	@docker compose > ${NULL} 2> ${NULL} || { echo 'docker compose not found.'; exit 1; }
 	docker compose watch
 
 ## Misc: server/go-air: Run the Go server with air
@@ -244,13 +242,10 @@ tidy/python:
 ## Extra: tidy/docker: Clean up Docker artifacts
 .PHONY: tidy/docker
 tidy/docker:
-	@docker --version 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
-	@docker compose --version 2> ${NULL} || { echo 'docker compose not found.'; exit 1; }
-	@echo ''
+	@docker > ${NULL} 2> ${NULL} || { echo 'Docker is not installed.'; exit 1; }
+	@docker compose > ${NULL} 2> ${NULL} || { echo 'docker compose not found.'; exit 1; }
 
-	docker compose down
-	@docker rmi nexis 2> ${NULL} && echo 'Docker image nexis:latest removed.' || echo 'Docker image nexis:latest not found.'
-	@docker rm nexis 2> ${NULL} && echo 'Docker container nexis removed.' || echo 'Docker container nexis not found.'
+	docker compose down --remove-orphans --rmi local
 	@echo 'Docker build cache at $HOME/.cache/go-build/ is not deleted by default.'
 
 
