@@ -35,6 +35,8 @@ straightforward as possible.
 
 ### Added
 
+- Improved API response handling ([#27](https://github.com/caffeine-addictt/nexis/pull/27))
+
 ### Changed
 
 ### Fixed

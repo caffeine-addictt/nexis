@@ -14,8 +14,7 @@ func RateLimiterMiddleware(next http.Handler) http.Handler {
 	newLim := tollbooth.NewLimiter(5, &limiter.ExpirableOptions{DefaultExpirationTTL: time.Hour})
 	newLim.SetOnLimitReached(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusTooManyRequests)
-		utils.WriteJsonResponse(w, &types.APIErrorResponse{
+		utils.WriteJsonResponse(w, http.StatusTooManyRequests, &types.APIErrorResponse{
 			Status:  http.StatusTooManyRequests,
 			Message: http.StatusText(http.StatusTooManyRequests),
 		})

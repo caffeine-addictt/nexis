@@ -33,10 +33,13 @@ func TestUpHandler(t *testing.T) {
 		expected := strings.Builder{}
 
 		// Write struct to JSON string
-		utils.WriteJsonResponse(&expected, &types.APISuccessResponse[string]{
+		err := utils.TryWriteJson(&expected, &types.APISuccessResponse[string]{
 			Status: http.StatusOK,
 			Data:   "Up!",
 		})
+		if err != nil {
+			t.Errorf("Failed to encode and write expected JSON response: %v", err)
+		}
 
 		// Check payload
 		if body != expected.String() {
