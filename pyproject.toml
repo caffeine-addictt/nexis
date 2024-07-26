@@ -34,7 +34,7 @@ Source = "https://github.com/caffeine-addictt/nexis"
 "Bug Tracker" = "https://github.com/caffeine-addictt/nexis/issues"
 
 [tool.poetry.scripts]
-nexis = "nexis.entrypoint:main"
+nexis = "nexis.console.entrypoint:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
