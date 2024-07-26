@@ -40,6 +40,7 @@ nexis = "nexis.entrypoint:main"
 python = "^3.9"
 cleo = "^2.1.0"
 importlib-metadata = { version = ">=4.4", python = "<3.10" }
+platformdirs = "^4.2.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.1"
