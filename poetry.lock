@@ -289,6 +289,17 @@ files = [
 ]
 
 [[package]]
+name = "typing-extensions"
+version = "4.12.2"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
+]
+
+[[package]]
 name = "zipp"
 version = "3.19.2"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -306,4 +317,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "779b3ee07fee2ef1d80858f71ece2a2423c9c0bd40314bdb151789d21ac9a57c"
+content-hash = "02d858fe40ff096f70acebbc31891af6fa3462afafcbe3f58a5f2afced73763d"
