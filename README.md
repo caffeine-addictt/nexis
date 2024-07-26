@@ -29,7 +29,7 @@
   <p align="center">
     NYP InfoSec Auth Service
     <br />
-    <a href="https://github.com/caffeine-addictt/nexis/docs/index.md">
+    <a href="https://github.com/caffeine-addictt/nexis/blob/main/docs/README.md">
       <strong>Explore the docs »</strong>
     </a>
     <br />
@@ -79,8 +79,12 @@ pip install nexis
 #### 2. Run Nexis
 
 ```sh
-nexis
+nexis --help
 ```
+
+Read our [docs](./docs/README.md) for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 

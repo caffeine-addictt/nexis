@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nexis"
-version = "0.1.1"
+version = "0.2.0"
 description = "NYP InfoSec Auth CLI"
 authors = ["Alex <contact@ngjx.org>"]
 license = "GPL-3.0"
@@ -34,12 +34,14 @@ Source = "https://github.com/caffeine-addictt/nexis"
 "Bug Tracker" = "https://github.com/caffeine-addictt/nexis/issues"
 
 [tool.poetry.scripts]
-nexis = "nexis.entrypoint:main"
+nexis = "nexis.console.entrypoint:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 cleo = "^2.1.0"
 importlib-metadata = { version = ">=4.4", python = "<3.10" }
+typing-extensions = "^4.12.2"
+platformdirs = "^4.2.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.1"

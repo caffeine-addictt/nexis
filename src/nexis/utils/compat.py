@@ -8,4 +8,4 @@ if sys.version_info < (3, 10):
 else:
     from importlib import metadata
 
-__all__ = ['metadata']
+__all__ = ["metadata"]
