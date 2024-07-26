@@ -35,11 +35,18 @@ straightforward as possible.
 
 ### Added
 
-- Improved API response handling ([#27](https://github.com/caffeine-addictt/nexis/pull/27))
-
 ### Changed
 
-### Fixed
+### Added
+
+## v0.2.0 - 2024-07-24
+
+### Added
+
+- Improved API response handling ([#27](https://github.com/caffeine-addictt/nexis/pull/27))
+- Add configuration files ([#28](https://github.com/caffeine-addictt/nexis/pull/28))
+- Add CLI documentation ([#28](https://github.com/caffeine-addictt/nexis/pull/28))
+- Add `nexis docs` command ([#28](https://github.com/caffeine-addictt/nexis/pull/28))
 
 ## v0.1.1 - 2024-07-23
 
