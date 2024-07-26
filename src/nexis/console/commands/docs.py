@@ -23,7 +23,7 @@ class DocsCommand(Command):
 
     def _handle(self) -> int:
         branch = "main" if self.option("dev") else f"v{__version__}"
-        url = f"https://github.com/caffeine-addictt/nexis/blob/{branch}/docs/index.md"
+        url = f"https://github.com/caffeine-addictt/nexis/blob/{branch}/docs/README.md"
         resp = f"<info>{url}</info>"
 
         if not self.option("browserless"):
