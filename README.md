@@ -21,7 +21,12 @@
 <br />
 <div align="center">
   <a href="https://github.com/caffeine-addictt/nexis">
-    <img src="assets/logo.png" alt="Logo" width="80" height="80">
+    <img
+      src="https://github.com/caffeine-addictt/nexis/raw/main/assets/logo.png"
+      alt="Logo"
+      width="80"
+      height="80"
+    >
   </a>
 
   <h3 align="center">Nexis</h3>
@@ -82,7 +87,8 @@ pip install nexis
 nexis --help
 ```
 
-Read our [docs](./docs/README.md) for more information.
+Read our [docs](https://github.com/caffeine-addictt/nexis/blob/main/docs/README.md)
+for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,7 +111,8 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-Read our [contributing guide](./CONTRIBUTING.md) for more information.
+Read our [contributing guide](https://github.com/caffeine-addictt/nexis/blob/main/CONTRIBUTING.md)
+for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +120,8 @@ Read our [contributing guide](./CONTRIBUTING.md) for more information.
 
 ## License
 
-Distributed under the GPL-3.0 License. See [LICENSE](./LICENSE) for more information.
+Distributed under the GPL-3.0 License. See [LICENSE](https://github.com/caffeine-addictt/nexis/blob/main/LICENSE)
+for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
