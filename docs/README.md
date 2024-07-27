@@ -60,7 +60,7 @@ Available commands:
 
 Nexis comes with a variety of commands.
 For detailed information on each command, refer to the
-[Commands Documentation](./commands/README.md)
+[Commands Documentation](https://github.com/caffeine-addictt/nexis/blob/main/docs/commands/README.md)
 
 ## Configuration
 
@@ -72,11 +72,11 @@ The configuration file load order is as follows:
 3. Path from `-C/--config` option (if provided)
 
 For detailed information on the configuration file,
-refer to the [Configuration Documentation](./config.md)
+refer to the [Configuration Documentation](https://github.com/caffeine-addictt/nexis/blob/main/docs/config.md)
 
 ## Closing
 
 If you encounter any problems or have questions, please
-feel free to [open an issue](https://github.com/caffeine-addictt/nexis/issues/new).
+feel free to [open an issue](https://github.com/caffeine-addictt/nexis/issues/new/choose).
 If you enjoy using Nexis, please consider [sponsoring us](https://github.com/sponsors/caffeine-addictt)
 or giving us a [✨ star](https://github.com/caffeine-addictt/nexis/stargazers)!

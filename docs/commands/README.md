@@ -45,5 +45,5 @@ while an option takes an argument.
 
 Click on the command names to view detailed documentation for each command.
 
-- [docs](./docs.md)
-- [list](./list.md)
+- [docs](https://github.con/caffeine-addictt/nexis/blob/main/docs/commands/docs.md)
+- [list](https://github.con/caffeine-addictt/nexis/blob/main/docs/commands/list.md)
