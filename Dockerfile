@@ -5,7 +5,7 @@
 ###################
 # 1. Building stage
 ###################
-FROM golang:1.22.5 AS build-stage
+FROM golang:1.22.6 AS build-stage
 
 # Update CA-Certs
 RUN update-ca-certificates
